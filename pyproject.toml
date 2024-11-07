@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sharedlocker-pi"
+version = "0.1.0"
+description = ""
+authors = ["bluewarn n5lp97@gmail.com"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+opencv-python = "^4.10.0.84"
+requests = "^2.32.3"
+pillow = "^11.0.0"
+pyzbar = "^0.1.9"
+rpi-lgpio = "^0.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

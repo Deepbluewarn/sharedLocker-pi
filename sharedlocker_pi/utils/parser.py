@@ -12,10 +12,4 @@ def parse_qr_data(qr_data):
         print("Invalid input structure")
 
 def parse_qr_response(qr_res):
-    data = json.loads(qr_res)
-
-    print(data["success"])
-    print(data["message"])
-    print(data["value"]["buildingName"])
-    print(data["value"]["floorNumber"])
-    print(data["value"]["lockerNumber"])
+    return json.loads(qr_res)

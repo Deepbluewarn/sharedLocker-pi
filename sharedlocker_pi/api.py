@@ -1,7 +1,9 @@
 from utils.camera import get_picture
 from utils.request import POST
+from env import building_number, floor_number, locker_cam_bus_info
 
-def request_analyze(bus_info):
+def request_analyze(locker_number):
+    bus_info = locker_cam_bus_info[locker_number]
     encoded_image = get_picture(bus_info)
 
     if encoded_image is None:
@@ -23,9 +25,9 @@ def request_analyze(bus_info):
         data={
             "imageUrl": data_url,
             "prompt": prompt,
-            "buildingNumber": 1,
-            "floorNumber": 1,
-            "lockerNumber": 1,
+            "buildingNumber": building_number,
+            "floorNumber": floor_number,
+            "lockerNumber": locker_number,
         },
         headers=post_headers
     )
